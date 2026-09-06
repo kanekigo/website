@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop All Products &mdash; CoreForge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="corestore.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="topbanner">Free delivery on prepaid orders &middot; 100% genuine, authorised stock &middot; No-cost EMI from &#8377;999/mo</div>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="logo" href="index.html"><div class="mark">C</div>CoreForge</a>
+    <nav class="main-nav">
+      <a href="shop.html?cat=Processors" class="">PC Parts</a>
+      <a href="shop.html?cat=Graphics+Cards" class="">Graphics Cards</a>
+      <a href="shop.html?cat=Pre-Built+PCs" class="">Pre-Built</a>
+      <a href="shop.html?cat=Gaming+Gear" class="">Gaming</a>
+      <a href="pc-builder.html" class="">PC Builder</a>
+      <a href="shop.html" class="active">Shop All</a>
+    </nav>
+    <div class="header-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+      <input type="text" id="siteSearch" placeholder="Search graphics cards, CPUs, laptops..." autocomplete="off">
+      <div id="searchResults" class="search-dropdown"></div>
+    </div>
+    <div class="header-actions">
+      <a class="head-icon" href="wishlist.html" title="Wishlist">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.6z"/></svg>
+        <span class="badge-count wish-count" style="display:none;">0</span>
+      </a>
+      <a class="head-icon" href="cart.html" title="Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h2l2.4 12.4a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L22 7H6"/><circle cx="9" cy="21" r="1"/><circle cx="18" cy="21" r="1"/></svg>
+        <span class="badge-count cart-count" style="display:none;">0</span>
+      </a>
+      <button class="head-icon mobile-toggle" id="mobileToggle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileNav" class="mobile-nav">
+    <div class="mobile-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+      <input type="text" id="siteSearchMobile" placeholder="Search products..." autocomplete="off">
+    </div>
+    <a href="shop.html?cat=Processors" class="">PC Parts</a>
+    <a href="shop.html?cat=Graphics+Cards" class="">Graphics Cards</a>
+    <a href="shop.html?cat=Pre-Built+PCs" class="">Pre-Built</a>
+    <a href="shop.html?cat=Gaming+Gear" class="">Gaming</a>
+    <a href="pc-builder.html" class="">PC Builder</a>
+    <a href="shop.html" class="active">Shop All</a>
+    <a href="wishlist.html">Wishlist</a>
+    <a href="cart.html">Cart</a>
+  </div>
+</header>
+
+<main>
+
+  <div class="wrap" style="padding-top:28px;">
+    <div class="crumb-path"><a href="index.html">Home</a> &nbsp;/&nbsp; <b>Shop All</b></div>
+
+    <div class="shop-shell">
+      <aside class="filter-card">
+        <div class="filter-block">
+          <h4>Category</h4>
+          <ul>
+            <li><a href="#" data-filter-category="all" class="filter-active">All Categories</a></li>
+            <li><a href="#" data-filter-category="Processors">Processors</a></li>
+            <li><a href="#" data-filter-category="Graphics Cards">Graphics Cards</a></li>
+            <li><a href="#" data-filter-category="Motherboards">Motherboards</a></li>
+            <li><a href="#" data-filter-category="Memory">Memory</a></li>
+            <li><a href="#" data-filter-category="Storage">Storage</a></li>
+            <li><a href="#" data-filter-category="Power Supplies">Power Supplies</a></li>
+            <li><a href="#" data-filter-category="Cases">Cases</a></li>
+            <li><a href="#" data-filter-category="Gaming Gear">Gaming Gear</a></li>
+            <li><a href="#" data-filter-category="Pre-Built PCs">Pre-Built PCs</a></li>
+          </ul>
+        </div>
+        <div class="filter-block">
+          <h4>Price</h4>
+          <input type="range" class="f-range" min="0" max="160000" step="1000" value="160000" data-filter-price>
+          <div class="f-hint" data-price-label style="font-size:11.5px; color:var(--muted); margin-top:8px;">&#8377;0 &mdash; &#8377;160,000</div>
+        </div>
+        <div class="filter-block">
+          <h4>Brand</h4>
+          <div class="f-check"><input type="radio" name="brand" data-filter-brand="GIGABYTE" id="br-1"><label for="br-1">GIGABYTE</label></div>
+          <div class="f-check"><input type="radio" name="brand" data-filter-brand="AMD" id="br-2"><label for="br-2">AMD</label></div>
+          <div class="f-check"><input type="radio" name="brand" data-filter-brand="Intel" id="br-3"><label for="br-3">Intel</label></div>
+          <div class="f-check"><input type="radio" name="brand" data-filter-brand="Corsair" id="br-4"><label for="br-4">Corsair</label></div>
+          <div class="f-check" style="display:none;"><input type="radio" name="brand" checked id="br-0"><label for="br-0"></label></div>
+          <a href="#" id="clearBrand" style="font-size:11.5px; color:var(--primary); font-weight:700;">Clear brand filter</a>
+        </div>
+      </aside>
+
+      <div>
+        <div class="shop-toolbar">
+          <div style="font-size:12.5px; color:var(--muted);"><span id="resultCount">12</span> products</div>
+          <div style="display:flex; align-items:center; gap:10px; font-size:12.5px; color:var(--muted);">
+            Sort by
+            <select class="f-control">
+              <option>Popularity</option>
+              <option>Newest</option>
+              <option>Price: low to high</option>
+              <option>Price: high to low</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="product-grid" id="shopGrid"></div>
+
+        <div id="filterEmpty" class="card" style="display:none; text-align:center; padding:40px; color:var(--muted); font-size:13px; margin-top:20px;">
+          No products match the selected filters.
+        </div>
+
+        <div class="pager">
+          <a href="#">&laquo;</a><a href="#" class="active">1</a><a href="#">2</a><a href="#">&raquo;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById('clearBrand')?.addEventListener('click', (e)=>{
+      e.preventDefault();
+      const b0 = document.getElementById('br-0');
+      b0.checked = true;
+      b0.dispatchEvent(new Event('change'));
+    });
+    // pre-select category from ?cat= query param
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const cat = new URLSearchParams(location.search).get('cat');
+      if(cat){
+        const link = document.querySelector(`[data-filter-category="${cat}"]`);
+        if(link) link.click();
+      }
+    });
+  </script>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-top">
+    <div class="footer-brand">
+      <a class="logo" href="index.html"><div class="mark">C</div>CoreForge</a>
+      <p>India's home for genuine PC hardware, pre-built systems, and gaming gear &mdash; with expert build guidance and fast delivery.</p>
+      <div class="footer-store">
+        <b>CoreForge Retail Pvt. Ltd.</b>
+        No. 838, KAJ Plaza, 1st Floor, Mount Road,<br>Annasalai, Chennai 600002, Tamil Nadu.<br>
+        +91 81225 81225
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Shop</h5>
+      <a href="shop.html?cat=Processors">PC Parts</a>
+      <a href="shop.html?cat=Graphics+Cards">Graphics Cards</a>
+      <a href="shop.html?cat=Pre-Built+PCs">Pre-Built PCs</a>
+      <a href="shop.html?cat=Gaming+Gear">Gaming Gear</a>
+      <a href="pc-builder.html">PC Builder</a>
+    </div>
+    <div class="footer-col">
+      <h5>Support</h5>
+      <a href="cart.html">Track Order</a>
+      <a href="#">Returns &amp; Refunds</a>
+      <a href="#">Warranty</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <a href="#">About Us</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Bulk / B2B Orders</a>
+    </div>
+  </div>
+  <div class="wrap footer-pay">
+    <span class="pay-chip">UPI</span><span class="pay-chip">Visa</span><span class="pay-chip">Mastercard</span>
+    <span class="pay-chip">RuPay</span><span class="pay-chip">Net Banking</span><span class="pay-chip">EMI</span><span class="pay-chip">COD</span>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>&copy; 2026 CoreForge. All rights reserved.</span>
+    <span>Genuine sealed stock &middot; GST invoice on every order</span>
+  </div>
+</footer>
+
+<script src="corestore.js"></script>
+
+</body>
+</html>

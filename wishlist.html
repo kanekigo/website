@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wishlist &mdash; CoreForge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="corestore.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="topbanner">Free delivery on prepaid orders &middot; 100% genuine, authorised stock &middot; No-cost EMI from &#8377;999/mo</div>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="logo" href="index.html"><div class="mark">C</div>CoreForge</a>
+    <nav class="main-nav">
+      <a href="shop.html?cat=Processors" class="">PC Parts</a>
+      <a href="shop.html?cat=Graphics+Cards" class="">Graphics Cards</a>
+      <a href="shop.html?cat=Pre-Built+PCs" class="">Pre-Built</a>
+      <a href="shop.html?cat=Gaming+Gear" class="">Gaming</a>
+      <a href="pc-builder.html" class="">PC Builder</a>
+      <a href="shop.html" class="">Shop All</a>
+    </nav>
+    <div class="header-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+      <input type="text" id="siteSearch" placeholder="Search graphics cards, CPUs, laptops..." autocomplete="off">
+      <div id="searchResults" class="search-dropdown"></div>
+    </div>
+    <div class="header-actions">
+      <a class="head-icon" href="wishlist.html" title="Wishlist">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.6z"/></svg>
+        <span class="badge-count wish-count" style="display:none;">0</span>
+      </a>
+      <a class="head-icon" href="cart.html" title="Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h2l2.4 12.4a2 2 0 0 0 2 1.6h8.4a2 2 0 0 0 2-1.6L22 7H6"/><circle cx="9" cy="21" r="1"/><circle cx="18" cy="21" r="1"/></svg>
+        <span class="badge-count cart-count" style="display:none;">0</span>
+      </a>
+      <button class="head-icon mobile-toggle" id="mobileToggle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileNav" class="mobile-nav">
+    <div class="mobile-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+      <input type="text" id="siteSearchMobile" placeholder="Search products..." autocomplete="off">
+    </div>
+    <a href="shop.html?cat=Processors" class="">PC Parts</a>
+    <a href="shop.html?cat=Graphics+Cards" class="">Graphics Cards</a>
+    <a href="shop.html?cat=Pre-Built+PCs" class="">Pre-Built</a>
+    <a href="shop.html?cat=Gaming+Gear" class="">Gaming</a>
+    <a href="pc-builder.html" class="">PC Builder</a>
+    <a href="shop.html" class="">Shop All</a>
+    <a href="wishlist.html">Wishlist</a>
+    <a href="cart.html">Cart</a>
+  </div>
+</header>
+
+<main>
+
+  <div class="wrap" style="padding-top:28px;">
+    <div class="crumb-path"><a href="index.html">Home</a> &nbsp;/&nbsp; <b>Wishlist</b></div>
+    <div class="sec-head"><div><h2>Your Wishlist</h2></div></div>
+    <div id="wishlistRoot"></div>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-top">
+    <div class="footer-brand">
+      <a class="logo" href="index.html"><div class="mark">C</div>CoreForge</a>
+      <p>India's home for genuine PC hardware, pre-built systems, and gaming gear &mdash; with expert build guidance and fast delivery.</p>
+      <div class="footer-store">
+        <b>CoreForge Retail Pvt. Ltd.</b>
+        No. 838, KAJ Plaza, 1st Floor, Mount Road,<br>Annasalai, Chennai 600002, Tamil Nadu.<br>
+        +91 81225 81225
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Shop</h5>
+      <a href="shop.html?cat=Processors">PC Parts</a>
+      <a href="shop.html?cat=Graphics+Cards">Graphics Cards</a>
+      <a href="shop.html?cat=Pre-Built+PCs">Pre-Built PCs</a>
+      <a href="shop.html?cat=Gaming+Gear">Gaming Gear</a>
+      <a href="pc-builder.html">PC Builder</a>
+    </div>
+    <div class="footer-col">
+      <h5>Support</h5>
+      <a href="cart.html">Track Order</a>
+      <a href="#">Returns &amp; Refunds</a>
+      <a href="#">Warranty</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <a href="#">About Us</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Bulk / B2B Orders</a>
+    </div>
+  </div>
+  <div class="wrap footer-pay">
+    <span class="pay-chip">UPI</span><span class="pay-chip">Visa</span><span class="pay-chip">Mastercard</span>
+    <span class="pay-chip">RuPay</span><span class="pay-chip">Net Banking</span><span class="pay-chip">EMI</span><span class="pay-chip">COD</span>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>&copy; 2026 CoreForge. All rights reserved.</span>
+    <span>Genuine sealed stock &middot; GST invoice on every order</span>
+  </div>
+</footer>
+
+<script src="corestore.js"></script>
+
+</body>
+</html>
